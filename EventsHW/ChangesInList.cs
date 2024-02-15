@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EventsHW
 {
-    internal class ChangesInList<T> : EventArgs
+    public class ChangesInList<T> : EventArgs
     {
         public T Item { get; }
         public int Index { get; }

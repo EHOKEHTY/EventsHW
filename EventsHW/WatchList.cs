@@ -26,17 +26,17 @@ namespace EventsHW
             ItemInserted?.Invoke(this, new ChangesInList<T>(item, index));
         }
 
-        public new void Add(T item)
+        public virtual void Add(T item)
         {
             base.Add(item);
             OnItemAdded(item);
         }
-        public new void Remove(T item)
+        public virtual void Remove(T item)
         {
             base.Remove(item);
             OnItemRemoved(item);
         }
-        public new void Insert(int index, T item)
+        public virtual void Insert(int index, T item)
         {
             base.Insert(index, item);
             OnItemInserted(index, item);
